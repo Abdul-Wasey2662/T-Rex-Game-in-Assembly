@@ -333,7 +333,7 @@ writeAgainInDino:
 	ret
 	; ==============================================================================================
 	
-moveDinoUp
+moveDinoUp:
 	push bp
 	mov bp,sp
 	sub word [rowOfDino], 5
@@ -641,7 +641,7 @@ myISRforINT8:
 	pop ax
 	iret
 	
-	collisionInINT8
+	collisionInINT8:
 	mov al, 0x20
 	out 0x20, al
 	pop ax
@@ -748,6 +748,3 @@ start:
 	
 mov ah,0x4c
 int 0x21
-
-
-
